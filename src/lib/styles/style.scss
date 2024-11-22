@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/src/lib/fonts/Poppins/Poppins-Regular.ttf');
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+header{
+    background-color: #4CC9FE;
+    .searchWrap{
+        background-color: #fff;
+        padding: 6px 8px;
+    }
+    .searchIcon{
+        color: #000;
+        border: none;
+    }
+    input[type="search"]{
+        border: none;
+        outline: none;
+        font-size: 14px;
+        padding: 0 4px 0 6px;
+    }
+}
+footer{
+    background-color: #F1F5F9;
+}
