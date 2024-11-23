@@ -5,7 +5,7 @@
 <header class="pb-3 text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <img src="/src/lib/images/logo.png" alt="logoT" width=100>
+        <img src="/src/lib/images/logo.png" alt="logo" width=100 >
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 pt-4 ps-4">
           <li><a href="/about" class="nav-link px-2 text-white">Home</a></li>
@@ -20,9 +20,10 @@
         </form>
 
         <div class="text-end pt-4">
-            <FeatherIcons name="plus-circle" className="btn btn-outline-light" />
-            <FeatherIcons name="settings" className="btn btn-outline-light" />
-            <button type="button" class="btn btn-light me-2">Login</button>
+            <!-- <FeatherIcons name="plus-circle" className="btn btn-outline-light" />
+            <FeatherIcons name="settings" className="btn btn-outline-light" /> -->
+            <button type="button" class="btn btn-light btnLogin me-2"><a href="/login" class="text-dark text-decoration-none">Login</a></button>
+            <button type="button" class="btnSignup rounded me-2 border-0"><a href="/signup" class="text-white text-decoration-none">Signup</a></button>
         </div>
       </div>
     </div>

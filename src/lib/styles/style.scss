@@ -13,8 +13,47 @@ body{
     font-family: 'Poppins';
 }
 
+.loader{
+    display: flex;
+    z-index: 99;
+    transition: all 1s ease-in-out;
+    .loaderContainer{
+        .textReveal{
+            top: 49.5%;
+            left: 45%;
+            height: 50px;
+            background-color: #f8f8ff;
+            animation: reveal 1s linear 1;
+        }
+    }
+    img{
+        animation: loaderAnimation 3s linear infinite;
+    }
+}
+@keyframes reveal {
+    0%{
+        width: 200px;
+    }
+    100%{
+        width: 0px;
+    }
+}
+@keyframes loaderAnimation {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.9);
+    }
+}
+
 header{
-    background-color: #4CC9FE;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: all .5s ease-in-out;
     .searchWrap{
         background-color: #fff;
         padding: 6px 8px;
@@ -29,7 +68,84 @@ header{
         font-size: 14px;
         padding: 0 4px 0 6px;
     }
+    .btnSignup{
+        padding: 0.460rem 0.75rem;
+        background-color: #84CC16;
+        &:hover{
+            opacity: .9;
+        }
+    }
 }
+
+.mainContent{
+    width: 100%;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+        url('/src/lib/images/mainBackground.jpg');
+    background-image: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    image-rendering: optimizeQuality;
+    background-attachment: fixed;
+    .mainContentContainer{
+        transform: translateY(-140px);
+        h1{
+            font-size: 84px;
+            font-weight: 800;
+        }
+        p{
+            font-size: 20px;
+        }
+        .btnConnectWithUs{
+            background-color: #84CC16;
+        }
+    }
+    
+}
+.cardTopFeatured{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    .card-title{
+        font-weight: 800;
+    }
+    .card-text{
+        color: #475467;
+    }
+    .extraDesc{
+        h6{
+            padding-top: 8px;
+        }
+    }
+    .progressBarContainer{
+        .progressBar{
+            width: 100%;
+            height: 14px;
+            background-color: #ECFCCB;
+            border-radius: 8px;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                background-color: #84CC16;
+                width: 30%;
+                border-radius: 8px;
+                height: 100%;
+            }
+        }
+        .progressBarFunds{
+            font-size: 24px;
+            font-weight: 800;
+        }
+    }
+
+}
+.btnTopFeatured{
+    background-color: #84CC16;
+}
+
 footer{
     background-color: #F1F5F9;
 }

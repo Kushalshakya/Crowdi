@@ -1,6 +1,19 @@
+<script>
+  import gsap from "gsap";
+  import { onMount } from "svelte";
+  onMount(async () => {
+    gsap.from(".loginAnm", {
+      scale: .8,
+      ease: "power.out",
+      delay: .2,
+      opacity: 0,
+    })
+  })
+</script>
+
 <section class="vh-100" style="background-color: #4CC9FE;">
     <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100 loginAnm">
         <div class="col col-xl-10"> 
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
