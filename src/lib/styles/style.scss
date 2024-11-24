@@ -81,7 +81,7 @@ header{
     width: 100%;
     height: 100vh;
     background-image:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
-        url('/src/lib/images/mainBackground.jpg');
+        url('images/mainBackground.jpg');
     background-image: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,6 +103,32 @@ header{
     }
     
 }
+
+.fundRaiserContainer{
+    .fundRaiser{
+        width: calc(100% / 5) !important;
+        .imageContainer{
+            width: 100%;
+            height: 280px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow-clip-margin: unset;
+            }
+        }
+        h5{
+            font-weight: 800;
+        }
+        .joinnow{
+            background-color: #84CC16;
+            &:hover{
+                opacity: .9;
+            }
+        }
+    }
+}
+
 .cardTopFeatured{
     position: absolute;
     bottom: 0px;

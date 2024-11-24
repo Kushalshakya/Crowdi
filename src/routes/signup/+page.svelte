@@ -18,13 +18,13 @@
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0 flex-row-reverse">
               <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="/src/lib/images/loginGirl.jpg" alt="login form" class="img-fluid" style="border-radius: 0 1rem 1rem 0; height:100%; object-fit:cover; object-position: 50%; overflow-clip-margin: unset;" />
+                <img src="images/loginGirl.jpg" alt="login form" class="img-fluid" style="border-radius: 0 1rem 1rem 0; height:100%; object-fit:cover; object-position: 50%; overflow-clip-margin: unset;" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
                   <form>
                     <div class="d-flex align-items-center mb-3 pb-1 justify-content-center">
-                        <img src="/src/lib/images/logo.png" alt="logo" width=100>
+                        <img src="images/logo.png" alt="logo" width=100>
                     </div>
   
                     <h5 class="fw-normal mb-3 pb-2 text-center" style="letter-spacing: 1px;">Create Your Account</h5>

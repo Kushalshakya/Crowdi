@@ -5,7 +5,7 @@
     <div class="footerContainer container">
     <div class="row justify-content-between">
       <div class="col-6 col-md-2 mb-3">
-        <img src="/src/lib/images/logo.png" alt="logoT" width=150>
+        <img src="images/logo.png" alt="logoT" width=150>
       </div>
       <div class="col-6 col-md-2 mb-3">
         <h5>Links</h5>

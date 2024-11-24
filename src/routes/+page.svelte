@@ -1,7 +1,8 @@
 <script>
-    import Header from '../lib/components/Header.svelte';
-    import Footer from '../lib/components/Footer.svelte';
+    import Header from '$lib/components/Header.svelte';
+    import Footer from '$lib/components/Footer.svelte';
     import FeatherIcons from '$lib/components/FeatherIcons.svelte';
+    import FundRaisers from '$lib/components/FundRaisers.svelte';
     
     import jQuery from 'jquery';
 
@@ -62,7 +63,7 @@
 
 <div id="loader" class="loader position-fixed justify-content-center align-items-center vh-100 w-100 bg-light">
     <div class="loaderContainer">
-        <img src="/src/lib/images/logo.png" alt="loader" width="200">
+        <img src="images/logo.png" alt="loader" width="200">
         <div class="textReveal position-absolute">
         </div>
     </div>
@@ -78,7 +79,7 @@
     <div class="card cardTopFeatured" style="width: 48rem;">
         <div class="card-body">
             <div class="cardContainer d-flex gap-3 align-items-center pt-2 pb-4">
-                <img src="/src/lib/images/avatarGirl01.avif" alt="HostAvatar" class="rounded-circle" width=70 >
+                <img src="images/avatarGirl01.avif" alt="HostAvatar" class="rounded-circle" width=70 >
                 <div class="cardDesc">
                     <h5 class="card-title">Help Us Teach Kids All Over The Country</h5>
                     <div class="extraDesc d-flex gap-2 align-items-center">
@@ -105,10 +106,20 @@
     </div>
 </div>
 
-<div class="vh-100 d-flex align-items-center justify-content-center w-100">
-    <h2>Explore Section Coming Soon...</h2>
+<div class="vh-auto w-100 py-4 mt-5">
+    <h2 class="text-center mt-5 pt-2 pb-3">Explore</h2>
+    <div class="fundRaiserContainer d-flex flex-wrap h-100 gap-4 align-items-center justify-content-center">
+        <FundRaisers />
+        <FundRaisers />
+        <FundRaisers />
+        <FundRaisers />
+        <FundRaisers />
+        <FundRaisers />
+        <FundRaisers />
+    </div>
 </div>
 <Footer />
 <style>
+    @import 'bootstrap/dist/css/bootstrap.css';
     @import '/src/lib/styles/style.css';
 </style>

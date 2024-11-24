@@ -5,7 +5,7 @@
 <header class="pb-3 text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <img src="/src/lib/images/logo.png" alt="logo" width=100 >
+        <img src="images/logo.png" alt="logo" width=100 >
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 pt-4 ps-4">
           <li><a href="/about" class="nav-link px-2 text-white">Home</a></li>
