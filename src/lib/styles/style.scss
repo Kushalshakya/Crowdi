@@ -13,6 +13,20 @@ body{
     font-family: 'Poppins';
 }
 
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#51c6f8, #299ccd, #4cc9fe);
+    border-radius: 8px;
+}
+
 .loader{
     display: flex;
     z-index: 99;
@@ -107,6 +121,7 @@ header{
 .fundRaiserContainer{
     .fundRaiser{
         width: calc(100% / 5) !important;
+        transition: all .5s ease-in-out;
         .imageContainer{
             width: 100%;
             height: 280px;
@@ -125,6 +140,34 @@ header{
             &:hover{
                 opacity: .9;
             }
+        }
+        p{
+            font-size: 14px;
+        }
+        .cardFundRaised{
+            .progressBar{
+                width: 100%;
+                height: 6px;
+                background-color: #ECFCCB;
+                border-radius: 8px;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background-color: #84CC16;
+                    width: 30%;
+                    border-radius: 8px;
+                    height: 100%;
+                }
+            }
+            h4{
+                font-size: 16px;
+                padding-top: 14px;
+            }
+        }
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.01);
         }
     }
 }
@@ -168,6 +211,7 @@ header{
     }
 
 }
+
 .btnTopFeatured{
     background-color: #84CC16;
 }

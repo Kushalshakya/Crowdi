@@ -8,6 +8,7 @@
 
     import { onMount } from "svelte";
     import gsap from 'gsap';
+    import Loader from '$lib/components/Loader.svelte';
 
     onMount(async () => {
         setInterval(() => {
@@ -61,13 +62,7 @@
 
 </script>
 
-<div id="loader" class="loader position-fixed justify-content-center align-items-center vh-100 w-100 bg-light">
-    <div class="loaderContainer">
-        <img src="images/logo.png" alt="loader" width="200">
-        <div class="textReveal position-absolute">
-        </div>
-    </div>
-</div>
+<Loader />
 
 <Header />
 <div class="mainContent d-flex justify-content-center align-items-center">
@@ -105,10 +100,10 @@
         </div>
     </div>
 </div>
-
+<!-- .fundRaiserContainer .fundRaiser -->
 <div class="vh-auto w-100 py-4 mt-5">
-    <h2 class="text-center mt-5 pt-2 pb-3">Explore</h2>
-    <div class="fundRaiserContainer d-flex flex-wrap h-100 gap-4 align-items-center justify-content-center">
+    <h2 class="mt-5 pt-2 ps-2 pb-4" style="width: 85%; margin: auto; font-weight:800; font-size: 30px;">Explore</h2>
+    <div class="fundRaiserContainer d-flex flex-wrap h-100 gap-4 align-items-center justify-content-center pb-3">
         <FundRaisers />
         <FundRaisers />
         <FundRaisers />

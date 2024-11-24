@@ -12,6 +12,20 @@ body {
   font-family: "Poppins";
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#51c6f8, #299ccd, #4cc9fe);
+  border-radius: 8px;
+}
+
 .loader {
   display: flex;
   z-index: 99;
@@ -101,6 +115,7 @@ header .btnSignup:hover {
 
 .fundRaiserContainer .fundRaiser {
   width: 20% !important;
+  transition: all 0.5s ease-in-out;
 }
 .fundRaiserContainer .fundRaiser .imageContainer {
   width: 100%;
@@ -120,6 +135,32 @@ header .btnSignup:hover {
 }
 .fundRaiserContainer .fundRaiser .joinnow:hover {
   opacity: 0.9;
+}
+.fundRaiserContainer .fundRaiser p {
+  font-size: 14px;
+}
+.fundRaiserContainer .fundRaiser .cardFundRaised .progressBar {
+  width: 100%;
+  height: 6px;
+  background-color: #ECFCCB;
+  border-radius: 8px;
+  position: relative;
+}
+.fundRaiserContainer .fundRaiser .cardFundRaised .progressBar::after {
+  content: "";
+  position: absolute;
+  background-color: #84CC16;
+  width: 30%;
+  border-radius: 8px;
+  height: 100%;
+}
+.fundRaiserContainer .fundRaiser .cardFundRaised h4 {
+  font-size: 16px;
+  padding-top: 14px;
+}
+.fundRaiserContainer .fundRaiser:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
 .cardTopFeatured {

@@ -1,15 +1,23 @@
 <script>
+  import Loader from "$lib/components/Loader.svelte";
   import gsap from "gsap";
   import { onMount } from "svelte";
+  import jQuery from "jquery";
+
   onMount(async () => {
-    gsap.from(".signAnm", {
-      scale: .8,
-      ease: "power.out",
-      delay: .2,
-      opacity: 0,
+    setTimeout(() => {
+        jQuery(".loader").css("transform", "translateY(-300%)", "opacity", ".8");
+        gsap.from(".signAnm", {
+          scale: .8,
+          ease: "power.out",
+          delay: .2,
+          opacity: 0,
+        })
+      }, 1000)
     })
-  })
 </script>
+
+<Loader />
 
 <section class="vh-100" style="background-color: #4CC9FE;">
     <div class="container py-5 h-100">
