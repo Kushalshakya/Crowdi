@@ -4,6 +4,8 @@
   import { onMount } from "svelte";
   import jQuery from "jquery";
 
+  import FeatherIcons from "$lib/components/FeatherIcons.svelte";
+
   onMount(async () => {
     setTimeout(() => {
         jQuery(".loader").css("transform", "translateY(-300%)", "opacity", ".8");
@@ -66,7 +68,12 @@
                       <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block w-100" type="button">Create Account</button>
                     </div>
   
-                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Already Have An Account? <a href="/login" style="color: #393f81;">Login here</a></p>
+                    <p class="pb-lg-2" style="color: #393f81;">Already Have An Account? <a href="/login" style="color: #393f81;">Login here</a></p>
+
+                    <p class="mb-5 pb-lg-2">
+                      <FeatherIcons name="home"/>
+                      <a href="/" class="px-2 text-decoration-none text-dark mt-2">Goto Main Page</a>
+                    </p>
                   </form>
   
                 </div>
@@ -77,7 +84,3 @@
       </div>
     </div>
   </section>  
-
-  <style>
-    @import '/src/lib/styles/style.css';
-</style>    

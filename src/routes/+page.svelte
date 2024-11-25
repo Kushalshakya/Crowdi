@@ -116,6 +116,4 @@
 </div>
 <Footer />
 <style>
-    @import 'bootstrap/dist/css/bootstrap.css';
-    @import '/src/lib/styles/style.css';
 </style>

@@ -1,5 +1,6 @@
 <script>
-  import Loader from "$lib/components/Loader.svelte";
+  import FeatherIcons from "$lib/components/FeatherIcons.svelte";
+import Loader from "$lib/components/Loader.svelte";
   import gsap from "gsap";
   import jQuery from "jquery";
 
@@ -52,7 +53,11 @@
                     </div>
   
                     <a class="small text-muted" href="#!">Forgot password?</a>
-                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="/signup" style="color: #393f81;">Register here</a></p>
+                    <p class="pb-lg-2" style="color: #393f81;">Don't have an account? <a href="/signup" style="color: #393f81;">Register here</a></p>
+                    <p class="mb-5 pb-lg-2">
+                      <FeatherIcons name="home"/>
+                      <a href="/" class="px-2 text-decoration-none text-dark mt-2">Goto Main Page</a>
+                    </p>
                   </form>
   
                 </div>
@@ -63,7 +68,3 @@
       </div>
     </div>
   </section>  
-
-  <style>
-    @import '/src/lib/styles/style.css';
-</style>    
