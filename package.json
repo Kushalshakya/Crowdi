@@ -22,9 +22,9 @@
 		"vitest": "^2.1.5"
 	},
 	"dependencies": {
-		"better-sqlite3": "^11.5.0",
 		"bootstrap": "^5.3.3",
 		"feather-icons": "^4.29.2",
+		"firebase": "^11.0.2",
 		"gsap": "^3.12.5",
 		"jquery": "^3.7.1"
 	}

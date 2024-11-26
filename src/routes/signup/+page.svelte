@@ -5,6 +5,10 @@
   import jQuery from "jquery";
 
   import FeatherIcons from "$lib/components/FeatherIcons.svelte";
+  
+  import { db } from "$lib/firebase/firebase";
+  import { serverTimestamp, collection, addDoc, getDocs } from "firebase/firestore";
+  import { error } from "@sveltejs/kit";
 
   onMount(async () => {
     setTimeout(() => {
@@ -17,6 +21,41 @@
         })
       }, 1000)
     })
+
+    let firstName = '';
+    let lastName = '';
+    let email = '';
+    async function submitForm(event) {
+      event.preventDefault();
+      const userData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        createdAt: serverTimestamp()
+      };
+      try{
+        await addDoc(collection(db,'users'),userData);
+        console.log("Success")
+      } catch(error){
+        console.error("Something went wrong: ", error);
+      }
+    }
+
+    async function retriveData() {
+      const userCollection = collection(db, 'users');
+      const dataRows = await getDocs(userCollection);
+
+      const userList = [];
+
+      dataRows.forEach((doc) => {
+          userList.push({
+            id: doc.id,
+            ...doc.data()
+          });
+      });
+      console.log(userList)
+    }
+    retriveData()
 </script>
 
 <Loader />
@@ -32,7 +71,7 @@
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
-                  <form>
+                  <form on:submit={submitForm}>
                     <div class="d-flex align-items-center mb-3 pb-1 justify-content-center">
                         <img src="images/logo.png" alt="logo" width=100>
                     </div>
@@ -43,20 +82,20 @@
                       <div class="col-md-6 mb-3">
                         <div data-mdb-input-init class="form-outline">
                           <label class="form-label" for="form3Example1">First name</label>
-                          <input type="text" id="form3Example1" class="form-control form-control-lg" />
+                          <input type="text" id="form3Example1" class="form-control form-control-lg" bind:value={firstName} />
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
                         <div data-mdb-input-init class="form-outline">
                           <label class="form-label" for="form3Example2">Last name</label>
-                          <input type="text" id="form3Example2" class="form-control form-control-lg" />
+                          <input type="text" id="form3Example2" class="form-control form-control-lg" bind:value={lastName} />
                         </div>
                       </div>
                     </div>
 
                     <div data-mdb-input-init class="form-outline mb-3">
                         <label class="form-label" for="form2Example17">Email address</label>
-                        <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                        <input type="email" id="form2Example17" class="form-control form-control-lg" bind:value={email} />
                     </div>
   
                     <div data-mdb-input-init class="form-outline mb-3">
@@ -65,7 +104,7 @@
                     </div>
   
                     <div class="pt-1 mb-3">
-                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block w-100" type="button">Create Account</button>
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block w-100" type="submit">Create Account</button>
                     </div>
   
                     <p class="pb-lg-2" style="color: #393f81;">Already Have An Account? <a href="/login" style="color: #393f81;">Login here</a></p>
